@@ -1,5 +1,7 @@
-import ExportedImage from 'next-image-export-optimizer';
-import s from './page.module.css';
+'use client'
+import ExportedImage from 'next-image-export-optimizer'
+import s from './page.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -13,7 +15,8 @@ export default function Home() {
           <li>Save and see your changes instantly.</li>
         </ol>
         <ExportedImage src={'/images/example.png'} alt="Example Image." priority width={411} height={385} />
+        <Link href={'/about'}>About</Link>
       </main>
     </div>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
@@ -22,6 +22,6 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: 'true',
     nextImageExportOptimizer_remoteImageCacheTTL: '0',
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next-image-export-optimizer",
-    "start": "serve out",
-    "lint": "biome check ."
+    "start": "serve dist",
+    "lint": "biome check .",
+    "format": "biome format --write ."
   },
   "dependencies": {
     "babel-plugin-react-compiler": "19.0.0-beta-decd7b8-20250118",
