@@ -2,9 +2,11 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  experimental: {
-    reactCompiler: true,
-  },
+  distDir: './dist',
+  // Enabled to improve DX and performance if not experimental.
+  // experimental: {
+  //   reactCompiler: true,
+  // },
   images: {
     loader: 'custom',
     imageSizes: [],
@@ -13,7 +15,7 @@ const nextConfig: NextConfig = {
   transpilePackages: ['next-image-export-optimizer'],
   env: {
     nextImageExportOptimizer_imageFolderPath: 'public/images',
-    nextImageExportOptimizer_exportFolderPath: 'out',
+    nextImageExportOptimizer_exportFolderPath: 'dist',
     nextImageExportOptimizer_quality: '80',
     nextImageExportOptimizer_storePicturesInWEBP: 'true',
     nextImageExportOptimizer_exportFolderName: 'nextImageExportOptimizer',

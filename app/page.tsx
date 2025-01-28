@@ -12,7 +12,7 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
-        <ExportedImage src={'/images/example.png'} alt="Example Image." priority />
+        <ExportedImage src={'/images/example.png'} alt="Example Image." priority width={411} height={385} />
       </main>
     </div>
   );
