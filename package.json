@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build && next-image-export-optimizer",
     "start": "serve dist",
     "lint": "biome check .",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "babel-plugin-react-compiler": "19.0.0-beta-decd7b8-20250118",
+    "classnames": "2.5.1",
     "next": "15.1.6",
     "next-image-export-optimizer": "1.18.0",
     "react": "19.0.0",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@svgr/webpack": "8.1.0",
     "@types/node": "20.17.16",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
