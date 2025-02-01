@@ -1,29 +1,59 @@
-'use client'
-import ExportedImage from 'next-image-export-optimizer'
-import NextIcon from '@/public/images/next.svg'
-import Link from 'next/link'
-import { useTheme } from '../context/ThemeContext'
-import s from './page.module.css'
+"use client";
+import example from "@/public/images/example.png";
+import NextIcon from "@/public/images/next.svg";
+import { Trans, useLingui } from "@lingui/react/macro";
+import Link from "next/link";
+import { Image } from "../components/Image";
+import { useI18n } from "../context/I18nProvider";
+import { useTheme } from "../context/ThemeContext";
+import s from "./page.module.css";
 
 export default function Home() {
-  const { theme, toggleTheme } = useTheme()
+  const { t } = useLingui();
+  const { theme, toggleTheme } = useTheme();
+  const { setLanguage, languages } = useI18n();
 
   return (
     <div className={s.page}>
-      <main className={s.main}>
-        <NextIcon className={s.logo} />
-        <ol>
-          <li>
+      <button className={s.button} type="button" onClick={toggleTheme}>
+        <Trans>Theme {theme}</Trans>
+      </button>
+      <Link className={s.button} href={"/pokemon"}>
+        <Trans>Pokemon Page</Trans>
+      </Link>
+      <div className={s.locales}>
+        {languages.map((language) => (
+          <button
+            className={s.button}
+            key={language}
+            type="button"
+            onClick={() => setLanguage(language)}
+          >
+            {language}
+          </button>
+        ))}
+      </div>
+      <NextIcon className={s.logo} />
+      <ol>
+        <li>
+          <Trans>
             Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-        <ExportedImage src={'/images/example.png'} alt="Example Image." priority width={411} height={385} />
-        <Link href={'/about'}>About</Link>
-        <button type="button" onClick={toggleTheme}>
-          Theme {theme}
-        </button>
-      </main>
+          </Trans>
+        </li>
+        <li>
+          <Trans>Save and see your changes instantly.</Trans>
+        </li>
+      </ol>
+
+      <div className={s.imageWrapper}>
+        <Image
+          src={example}
+          alt={t`Example Image.`}
+          priority
+          width={411}
+          height={385}
+        />
+      </div>
     </div>
-  )
+  );
 }

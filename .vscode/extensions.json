@@ -1,3 +1,9 @@
 {
-  "recommendations": ["biomejs.biome", "jock.svg", "vscode-icons-team.vscode-icons"]
+  "recommendations": [
+    "biomejs.biome",
+    "jock.svg",
+    "vscode-icons-team.vscode-icons",
+    "dbaeumer.vscode-eslint",
+    "mrorz.language-gettext"
+  ]
 }
