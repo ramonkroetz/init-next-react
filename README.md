@@ -1,6 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# This is a [Next.js](https://nextjs.org) project
 
-Tags: Next.js, Biome, ESLint, Lingui (i18n), SWR with Axios, next-image-export-optimizer
+- This project use NextJS but in a [SPA](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) mode with App Router.
+- Use [Biome](https://biomejs.dev/) and [ESLint](https://eslint.org/) for custom rules.
+- Use i18n [Lingui](https://lingui.dev/)
+- Use [SWR](https://swr.vercel.app/) with [Axios](https://axios-http.com/) for API Request
+- Use [next-image-export-optimizer](https://www.npmjs.com/package/next-image-export-optimizer) to optime Images using Image component from Next.js but without calling the api inside the component.
+
+**Tags**: Next.js, Biome, ESLint, Lingui (i18n), SWR with Axios, next-image-export-optimizer
 
 ## Getting Started
 
@@ -17,12 +23,6 @@ npm run dev
 # Build the project
 npm run build
 
-# Test build 
+# Test build
 npm start
 ```
-
-- This project use NextJS but in a *SPA* mode.
-- Use Biome and ESLint for custom rules.
-- Use i18n [Lingui](https://lingui.dev/)
-- Use SWR with Axios for API Request
-- Use next-image-export-optimizer to optime Images using Image component from Next.js but not call the api from them.
