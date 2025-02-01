@@ -25,4 +25,4 @@ npm start
 - Use Biome and ESLint for custom rules.
 - Use i18n [Lingui](https://lingui.dev/)
 - Use SWR with Axios for API Request
-- Use next-image-export-optimizer to optime Images usign Image component from Next.js but not call the api from them.
+- Use next-image-export-optimizer to optime Images using Image component from Next.js but not call the api from them.
