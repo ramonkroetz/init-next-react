@@ -1,7 +1,14 @@
 {
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", "dist", ".next", "packages", "src/locales"]
+    "ignore": [
+      "node_modules",
+      "dist",
+      ".next",
+      "packages",
+      "src/locales",
+      "public/browserDetect"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -14,7 +21,13 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedLabels": "error",
+        "noUnusedVariables": "error",
+        "noUnusedFunctionParameters": "error"
+      }
     }
   },
   "javascript": {

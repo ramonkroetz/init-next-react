@@ -1,0 +1,20 @@
+.messageModalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+}
+
+.confirmButton {
+  border: solid 1px black;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.confirmButton:hover {
+  background-color: beige;
+}

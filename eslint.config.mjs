@@ -1,22 +1,23 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
-});
+})
 
 const eslintConfig = [
   ...compat.config({
-    extends: ["next", "next/core-web-vitals", "plugin:lingui/recommended"],
-    ignorePatterns: ["src/locales"],
+    extends: ['next', 'next/core-web-vitals', 'plugin:lingui/recommended'],
+    plugins: ['custom-rules'],
+    ignorePatterns: ['src/locales'],
     rules: {
-      "no-console": "warn",
+      'no-console': 'warn',
     },
     settings: {
       next: {
-        rootDir: ".",
+        rootDir: ['./src'],
       },
     },
   }),
-];
+]
 
-export default eslintConfig;
+export default eslintConfig

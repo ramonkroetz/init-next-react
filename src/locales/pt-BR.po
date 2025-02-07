@@ -13,35 +13,39 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/page.tsx:51
+#: src/app/page.tsx
 msgid "Example Image."
 msgstr "Exemplo de imagem."
 
-#: src/app/pokemon/page.tsx:40
+#: src/app/pokemon/page.tsx
 msgid "Example Pokemon Page"
 msgstr "Página de Pokémon"
 
-#: src/app/page.tsx:39
+#: src/app/page.tsx
 msgid "Get started by editing <0>app/page.tsx</0>."
 msgstr "Comece editando <0>app/page.tsx</0>."
 
-#: src/app/pokemon/page.tsx:46
+#: src/app/pokemon/page.tsx
 msgid "Home Page"
 msgstr "Página Inicial"
 
-#: src/app/pokemon/page.tsx:19
+#: src/app/pokemon/page.tsx
 msgid "Loading Names Pokemon..."
 msgstr "Carregando nomes de Pokémon..."
 
-#: src/app/page.tsx:22
+#: src/app/page.tsx
+msgid "Modals Page"
+msgstr "Página de modais"
+
+#: src/app/page.tsx
 msgid "Pokemon Page"
 msgstr "Página de Pokémon"
 
-#: src/app/page.tsx:44
+#: src/app/page.tsx
 msgid "Save and see your changes instantly."
 msgstr "Salve e veja suas alterações instantaneamente."
 
-#: src/app/page.tsx:19
-#: src/app/pokemon/page.tsx:43
+#: src/app/page.tsx
+#: src/app/pokemon/page.tsx
 msgid "Theme {theme}"
 msgstr "Tema {theme}"

@@ -1,11 +1,11 @@
-import axios, { type AxiosResponse } from "axios";
-import { createCustomError } from "./error";
+import axios, { type AxiosResponse } from 'axios'
+import { createCustomError } from './error'
 
-export type ApiResponse<T> = AxiosResponse<T>;
+export type ApiResponse<T> = AxiosResponse<T>
 
 export const ApiService = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL_API,
-});
+})
 
 ApiService.interceptors.response.use(
   (response: AxiosResponse<unknown>) => {
@@ -14,10 +14,10 @@ ApiService.interceptors.response.use(
     // const customError = createCustomError('ErrorApiResponse', info)
     // return Promise.reject(customError)
 
-    return response;
+    return response
   },
   (error: unknown) => {
-    const customError = createCustomError("ErrorApiResponse", error);
-    return Promise.reject(customError);
-  }
-);
+    const customError = createCustomError('ErrorApiResponse', error)
+    return Promise.reject(customError)
+  },
+)

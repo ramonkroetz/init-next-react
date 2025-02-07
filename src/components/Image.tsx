@@ -1,15 +1,15 @@
-import ExportedImage from "next-image-export-optimizer";
+import ExportedImage from 'next-image-export-optimizer'
 
-import type { StaticImageData } from "next/image";
-import s from "./Image.module.css";
+import type { StaticImageData } from 'next/image'
+import s from './Image.module.css'
 
 type ImageProps = {
-  src: string | StaticImageData;
-  alt: string;
-  priority?: boolean;
-  width: number;
-  height: number;
-};
+  src: string | StaticImageData
+  alt: string
+  priority?: boolean
+  width: number
+  height: number
+}
 
 export function Image({ src, alt, priority, width, height }: ImageProps) {
   return (
@@ -22,5 +22,5 @@ export function Image({ src, alt, priority, width, height }: ImageProps) {
       height={height}
       style={{ maxHeight: height, maxWidth: width }}
     />
-  );
+  )
 }
