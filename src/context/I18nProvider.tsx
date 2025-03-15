@@ -3,8 +3,8 @@
 import { i18n } from '@lingui/core'
 import { I18nProvider as LinguiProvider } from '@lingui/react'
 import { type PropsWithChildren, createContext, useContext, useEffect, useMemo, useState } from 'react'
-import linguiConfig from '../../lingui.config.js'
 
+import linguiConfig from '../../lingui.config.js'
 import { messages as enMessages } from '../locales/en'
 import { messages as ptBRMessages } from '../locales/pt-BR'
 

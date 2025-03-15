@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: center;
   max-width: 500px;
-  margin: auto;
   height: 100%;
+  margin: auto;
 
   & ol {
-    padding-left: 0;
     margin: 0;
+    padding-left: 0;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.01em;
@@ -20,46 +20,46 @@
     }
 
     & code {
-      font-family: inherit;
-      background: rgba(0, 0, 0, 0.05);
       padding: 2px 4px;
       border-radius: 4px;
+      font-family: inherit;
       font-weight: 600;
+      background: rgba(0, 0, 0, 0.05);
     }
   }
 
   & .logo {
-    color: var(--foreground);
     max-width: 300px;
     margin-bottom: 30px;
+    color: var(--foreground);
   }
 }
 
 .button {
+  cursor: pointer;
   /* clean button */
   display: block;
   width: 100%;
-  appearance: none;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  font-weight: normal;
-  text-align: center;
   /* clean button */
 
   margin-bottom: 30px;
   padding: 8px 16px;
-  background-color: var(--default-color-100);
-  color: var(--default-color-950);
+  border: none;
   font-size: 16px;
+  font-weight: normal;
+  color: var(--default-color-950);
+  text-align: center;
+  appearance: none;
+  background: transparent;
+  background-color: var(--default-color-100);
 }
 
 .imageWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0;
   width: 100%;
+  margin: 30px 0;
 }
 
 .locales {

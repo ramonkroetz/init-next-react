@@ -1,26 +1,26 @@
 .page {
   display: flex;
   flex-direction: column;
-  margin: auto;
   height: 100%;
+  margin: auto;
   padding: 20px 0;
 }
 
 .button {
+  cursor: pointer;
   /* clean button */
   display: block;
   width: 100%;
-  appearance: none;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  font-weight: normal;
-  text-align: center;
   /* clean button */
 
   margin-bottom: 30px;
   padding: 8px 16px;
-  background-color: var(--default-color-100);
-  color: var(--default-color-950);
+  border: none;
   font-size: 16px;
+  font-weight: normal;
+  color: var(--default-color-950);
+  text-align: center;
+  appearance: none;
+  background: transparent;
+  background-color: var(--default-color-100);
 }

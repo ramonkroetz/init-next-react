@@ -1,7 +1,9 @@
 'use client'
 
-import { useMessageModal } from '@/src/components/modals/MessageModal'
 import cn from 'classnames'
+
+import { useMessageModal } from '@/src/components/modals/MessageModal'
+
 import s from './modals.module.css'
 
 export default function Modals() {

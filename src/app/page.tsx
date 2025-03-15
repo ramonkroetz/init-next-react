@@ -1,11 +1,14 @@
 'use client'
+import { Trans as T, useLingui } from '@lingui/react/macro'
+import Link from 'next/link'
+
 import example from '@/public/images/example.png'
 import NextIcon from '@/public/images/next.svg'
-import { Trans, useLingui } from '@lingui/react/macro'
-import Link from 'next/link'
+
 import { Image } from '../components/Image'
 import { useI18n } from '../context/I18nProvider'
 import { useTheme } from '../context/ThemeContext'
+
 import s from './page.module.css'
 
 export default function Home() {
@@ -16,13 +19,13 @@ export default function Home() {
   return (
     <div className={s.page}>
       <button className={s.button} type="button" onClick={toggleTheme}>
-        <Trans>Theme {theme}</Trans>
+        <T>Theme {theme}</T>
       </button>
       <Link className={s.button} href={'/pokemon'}>
-        <Trans>Pokemon Page</Trans>
+        <T>Pokemon Page</T>
       </Link>
       <Link className={s.button} href={'/modals'}>
-        <Trans>Modals Page</Trans>
+        <T>Modals Page</T>
       </Link>
       <div className={s.locales}>
         {languages.map((language) => (
@@ -34,12 +37,12 @@ export default function Home() {
       <NextIcon className={s.logo} />
       <ol>
         <li>
-          <Trans>
+          <T>
             Get started by editing <code>app/page.tsx</code>.
-          </Trans>
+          </T>
         </li>
         <li>
-          <Trans>Save and see your changes instantly.</Trans>
+          <T>Save and see your changes instantly.</T>
         </li>
       </ol>
 

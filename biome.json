@@ -13,7 +13,8 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "lineWidth": 120
+    "lineWidth": 120,
+    "lineEnding": "lf"
   },
   "organizeImports": {
     "enabled": true
@@ -22,6 +23,9 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "suspicious": {
+        "noConsoleLog": "error"
+      },
       "correctness": {
         "noUnusedImports": "error",
         "noUnusedLabels": "error",

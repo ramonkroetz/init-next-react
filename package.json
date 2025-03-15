@@ -5,31 +5,36 @@
   "scripts": {
     "build:web": "npm run lingui:extract:compile && npm run lint && next build && npm run image:optimize",
     "build:dev": "env-cmd -f .env.dev npm run build:web",
-    "build:stage": "env-cmd -f .env.stage npm run build:web",
-    "build:prod": "env-cmd -f .env.prod npm run build:web",
+    "build:stage": "rm -rf dist && rm -rf .next && env-cmd -f .env.stage npm run build:web",
+    "build:production": "rm -rf dist && rm -rf .next && env-cmd -f .env.prod npm run build:web",
     "dev": "npm run lingui:extract:compile && env-cmd -f .env.dev next dev",
     "stage": "npm run build:stage && npm run start",
-    "prod": "npm run build:prod && npm run start",
+    "production": "npm run build:production && npm run start",
     "start": "serve dist",
-    "lint": "biome lint --error-on-warnings . && next lint",
+    "lint": "biome lint --error-on-warnings . && npm run lint:next-eslint && npm run lint:css",
+    "lint:next-eslint": "next lint && eslint . --config eslint.config.mjs",
+    "lint:css": "stylelint **/*.css",
     "image:optimize": "next-image-export-optimizer",
-    "biome:format": "biome format --write .",
     "lingui:extract:compile": "lingui extract && lingui compile",
     "preinstall:supported:browsers": "chmod +x scripts/generateSupportedBrowsers.sh",
-    "supported:browsers": "./scripts/generateSupportedBrowsers.sh"
+    "supported:browsers": "./scripts/generateSupportedBrowsers.sh",
+    "biome:format": "biome format --write .",
+    "eslint:format": "eslint --config eslint.config.mjs --fix",
+    "css:format": "stylelint --fix"
   },
   "dependencies": {
     "@lingui/core": "5.2.0",
     "@lingui/react": "5.2.0",
     "@next/third-parties": "15.1.6",
-    "axios": "1.7.9",
+    "axios": "1.8.3",
     "classnames": "2.5.1",
+    "client-error-logger": "github:ramonkroetz/client-error-logger#v1.0.0",
     "env-cmd": "10.1.0",
+    "js-cookie": "3.0.5",
     "next": "15.1.6",
     "next-image-export-optimizer": "1.18.0",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "swr": "2.3.0"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -37,6 +42,7 @@
     "@lingui/loader": "5.2.0",
     "@lingui/swc-plugin": "5.0.2",
     "@svgr/webpack": "8.1.0",
+    "@types/js-cookie": "3.0.6",
     "@types/node": "20.17.16",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
@@ -45,6 +51,9 @@
     "eslint-config-next": "15.1.6",
     "eslint-plugin-lingui": "0.9.0",
     "serve": "14.2.4",
+    "sharp": "0.33.5",
+    "stylelint": "16.16.0",
+    "stylelint-config-clean-order": "7.0.0",
     "typescript": "5.7.3"
   },
   "overrides": {

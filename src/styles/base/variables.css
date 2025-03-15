@@ -1,0 +1,11 @@
+:root {
+  /* Colors - https://uicolors.app/create */
+  /* #000000 Theme */
+  --default-color-50: #ffffff;
+  --default-color-100: #e7e7e7;
+  --default-color-950: #000000;
+
+  /* Dark theme default - filed in ThemeProvider */
+  --background: var(--default-color-950);
+  --foreground: var(--default-color-50);
+}

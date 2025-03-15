@@ -3,11 +3,9 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'dist',
-  // Enabled to improve DX and performance if not experimental.
-  // experimental: {
-  //   reactCompiler: true,
-  // },
   experimental: {
+    // Enabled to improve DX and performance if not experimental.
+    // reactCompiler: true,
     swcPlugins: [
       [
         '@lingui/swc-plugin',

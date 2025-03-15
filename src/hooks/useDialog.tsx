@@ -1,5 +1,6 @@
 import { useCallback, useRef } from 'react'
-import type { ReactNode } from 'react'
+import type { PropsWithChildren } from 'react'
+
 import s from './dialog.module.css'
 
 type DialogProps = {
@@ -29,7 +30,7 @@ export function useDialog({ hasCloseButton = true }: DialogProps) {
   }, [close])
 
   const Dialog = useCallback(
-    ({ children }: { children: ReactNode }) => (
+    ({ children }: PropsWithChildren) => (
       <dialog className={s.dialog} ref={dialogRef}>
         {children}
         {hasCloseButton && (

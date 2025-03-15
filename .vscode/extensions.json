@@ -4,6 +4,7 @@
     "jock.svg",
     "vscode-icons-team.vscode-icons",
     "dbaeumer.vscode-eslint",
-    "mrorz.language-gettext"
+    "mrorz.language-gettext",
+    "emeraldwalk.RunOnSave"
   ]
 }

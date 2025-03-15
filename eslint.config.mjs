@@ -7,10 +7,24 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.config({
     extends: ['next', 'next/core-web-vitals', 'plugin:lingui/recommended'],
-    plugins: ['custom-rules'],
-    ignorePatterns: ['src/locales'],
+    ignorePatterns: ['node_modules', 'dist', '.next', 'public/browserDetect', 'src/locales'],
     rules: {
-      'no-console': 'warn',
+      'linebreak-style': ['error', 'unix'],
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'always',
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          pathGroups: [
+            {
+              pattern: './*.css',
+              group: 'index',
+              position: 'after',
+            },
+          ],
+          alphabetize: { order: 'asc' },
+        },
+      ],
     },
     settings: {
       next: {

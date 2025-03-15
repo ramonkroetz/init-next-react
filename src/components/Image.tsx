@@ -1,6 +1,6 @@
+import type { StaticImageData } from 'next/image'
 import ExportedImage from 'next-image-export-optimizer'
 
-import type { StaticImageData } from 'next/image'
 import s from './Image.module.css'
 
 type ImageProps = {

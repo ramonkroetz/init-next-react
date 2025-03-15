@@ -33,6 +33,10 @@ msgstr "Página Inicial"
 msgid "Loading Names Pokemon..."
 msgstr "Carregando nomes de Pokémon..."
 
+#: src/app/pokemon/page.tsx
+msgid "Message error Bad Request"
+msgstr "Mensagem de erro Bad Request"
+
 #: src/app/page.tsx
 msgid "Modals Page"
 msgstr "Página de modais"

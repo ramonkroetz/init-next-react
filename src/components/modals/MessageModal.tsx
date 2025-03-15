@@ -1,6 +1,7 @@
+import { useCallback } from 'react'
+
 import { useDialog } from '@/src/hooks/useDialog'
 
-import { useCallback } from 'react'
 import s from './MessageModal.module.css'
 
 type MessageModalProps = {
